@@ -28,7 +28,7 @@ public class BookingController {
     }
 
     @PatchMapping("/{bookingId}")
-    public BookingDto updateItem(@RequestParam ("approved") Boolean approved,
+    public BookingDto updateItem(@RequestParam("approved") Boolean approved,
                                  @RequestHeader(HEADER_USER_ID) String owner,
                                  @PathVariable("bookingId") Long bookingId) {
         log.info("{} обновил бронь с ID {}", owner, bookingId);

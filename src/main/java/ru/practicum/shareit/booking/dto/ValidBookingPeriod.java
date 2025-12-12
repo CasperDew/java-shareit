@@ -11,6 +11,8 @@ import java.lang.annotation.*;
 @Documented
 public @interface ValidBookingPeriod {
     String message() default "Бронирование некорректно: даты должны быть в будущем, начало ≤ конец";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }
