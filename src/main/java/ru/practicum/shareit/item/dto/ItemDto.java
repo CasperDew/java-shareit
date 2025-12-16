@@ -3,6 +3,9 @@ package ru.practicum.shareit.item.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import ru.practicum.shareit.booking.dto.BookingDto;
+
+import java.util.List;
 
 /**
  * TODO Sprint add-controllers.
@@ -20,4 +23,7 @@ public class ItemDto {
     @NotNull(message = "Статус не может быть пустой.")
     private Boolean available;
 
+    private BookingDto lastBooking;
+    private BookingDto nextBooking;
+    private List<CommentDto> comments;
 }
